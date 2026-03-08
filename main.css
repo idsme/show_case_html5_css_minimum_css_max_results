@@ -37,7 +37,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: Tahoma, Verdana, Arial, Georgia, Garamond, Courier New;
+  font-family: 'Roboto Condensed', Tahoma, Verdana, Arial, sans-serif;
   font-size: 1rem;
   font-weight: var(--text-weight-button-normal);
   color: var(--text-color-primary);
