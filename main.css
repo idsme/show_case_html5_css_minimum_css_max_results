@@ -203,6 +203,10 @@ label span {
   color: var(--label-color);
 }
 
+.float-right {
+  float: right;
+}
+
 .button {
   text-align: center;
   width: auto !important;
