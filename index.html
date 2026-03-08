@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -7,9 +7,9 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="project_card.css" />
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- my favorite default fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Inspiration:regular" rel="stylesheet" /> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic"
@@ -68,26 +68,23 @@
             <h2>Form Title</h2>
             <h3>Form Description</h3>
             <form action="#">
-                <label>First Name</label>
-                <input type="text" name="firstname" placeholder="Enter your first name here">
-                <!-- <label>First Name</label>
-                <input type="text" class="xform-field-validation-error" name="firstname"
-                    placeholder="Enter your first name here"> -->
-                <label>Last Name</label>
-                <input type="text" name="lastname" placeholder="Enter your last name here">
-                <label>City</label>
-                <select name="city">
-                    <option value="" selected="">Select city...</option>
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Enter your first name here">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Enter your last name here">
+                <label for="city">City</label>
+                <select id="city" name="city">
+                    <option value="" selected>Select city...</option>
                     <option value="1">London</option>
                     <option value="2">Paris</option>
                     <option value="3">New York</option>
                 </select>
-                <label>Email Address</label>
-                <input type="email" name="email" placeholder="Enter your email address here">
-                <label>Description</label>
-                <textarea name="description" rows="5" placeholder="Use this space to enter a description"></textarea>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address here">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="5" placeholder="Use this space to enter a description"></textarea>
                 <button>Submit</button>
-                <a href="#" class="button alt">Cancel</a>
+                <a href="#" class="button button-alt">Cancel</a>
                 <p><input type="checkbox" name="join" value="1" checked=""> Add me to the mailing list</p>
             </form>
         </section>
