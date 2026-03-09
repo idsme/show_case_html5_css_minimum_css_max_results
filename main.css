@@ -164,8 +164,8 @@ nav > * {
     text-align: center;
 }
 
-nav ul:last-child li{
-    float: right;
+nav ul:last-child {
+    text-align: right;
 }
 
 nav ul {
