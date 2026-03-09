@@ -1,6 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════════
    Design Token API — Change these values to re-theme the entire page
    Variable naming follows BEM: --block__element--modifier
+   Spacing uses flat scale: --space--size (no element segment)
    ═══════════════════════════════════════════════════════════════════ */
 
 :root {
@@ -32,7 +33,6 @@
   --border__color:               #ece9e9;
   --border__color--strong:       #3a3a3a;
   --border__radius:              4px;
-  --border__radius--full:        9999px;
 
   /* ─── Typography ─── */
   --font__family:                ui-monospace, SFMono-Regular, Menlo, Monaco,
@@ -46,7 +46,7 @@
   --line__height:                1.5;
   --line__height--relaxed:       1.75;
 
-  /* ─── Spacing (4px base grid) ─── */
+  /* ─── Spacing (4px base grid, flat scale) ─── */
   --space--xs:                   0.25rem;
   --space--sm:                   0.5rem;
   --space--md:                   1rem;
@@ -119,10 +119,9 @@ main > *:not(:first-child) {
   margin-top: var(--space--xl);
 }
 
-section > *:not(h1):not(h2)  {
-    margin-left: var(--space--sm);
+section > *:not(h1):not(h2) {
+  margin-left: var(--space--sm);
 }
-
 
 .container {
   width: 90%;
@@ -171,7 +170,6 @@ nav ul:last-child {
 nav ul {
   margin: 0;
   padding: 0;
-
 }
 
 nav > * {
@@ -427,6 +425,7 @@ input[type="password"]:focus,
 select:focus,
 textarea:focus {
   border-color: var(--color__accent);
+  outline: 2px solid rgba(0, 108, 172, 0.25);
   outline: 2px solid color-mix(in srgb, var(--color__accent) 25%, transparent);
   outline-offset: 1px;
 }
@@ -467,7 +466,6 @@ button,
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  line-height: var(--line__height);
   margin: var(--space--md) var(--space--xs) 0 0;
 }
 

@@ -3,7 +3,7 @@
     var html = document.documentElement;
     var stored = localStorage.getItem('theme');
 
-    if (stored) {
+    if (stored === 'dark' || stored === 'light') {
         html.setAttribute('data-theme', stored);
     }
 
