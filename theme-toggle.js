@@ -7,7 +7,8 @@
         html.setAttribute('data-theme', stored);
     }
 
-    toggle.addEventListener('click', function () {
+    toggle.addEventListener('click', function (e) {
+        e.preventDefault();
         var current = html.getAttribute('data-theme');
         var next = current === 'dark' ? 'light' : 'dark';
         html.setAttribute('data-theme', next);

@@ -115,8 +115,6 @@ body > *:not(header):not(footer):not(aside) {
   margin-left: var(--space--md);
 }
 
-
-
 main > *:not(:first-child) {
   margin-top: var(--space--xl);
 }
@@ -152,19 +150,39 @@ header * {
   color: var(--color__text--inverse);
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul:first-child li{
+    float: left;
+}
+
+nav > * {
+    text-align: center;
+}
+
+nav ul:last-child li{
+    float: right;
+}
+
 nav ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+}
+
+nav > * {
+    width: 100%;
 }
 
 nav ul li {
-  display: inline-block;
+  display: inline;
 }
 
-nav svg {
-  width: var(--icon__size);
-  height: var(--icon__size);
+nav i {
   display: inline-block;
   vertical-align: middle;
   margin-right: var(--space--xs);
@@ -174,10 +192,12 @@ nav a {
   color: var(--color__text--inverse);
   text-decoration: none;
   padding: var(--space--xs) var(--space--sm);
+  vertical-align: middle;
+  display: inline-block;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: wavy underline;
   opacity: var(--interaction__opacity--hover);
   color: var(--color__text--inverse);
 }
@@ -186,34 +206,10 @@ nav a:visited {
   color: var(--color__text--inverse);
 }
 
-nav a[aria-current="page"] {
-  text-decoration: underline wavy;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
 /* Theme toggle: show sun in dark mode, moon in light mode */
 [data-theme="light"] .icon-sun { display: none; }
 [data-theme="dark"] .icon-moon { display: none; }
-[data-theme="dark"] .icon-sun { display: inline-block; }
-
-nav button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: var(--space--xs);
-  margin: 0;
-  border-radius: var(--border__radius--full);
-  vertical-align: middle;
-}
-
-nav button:hover {
-  opacity: var(--interaction__opacity--hover);
-}
-
-nav button svg {
-  margin-right: 0;
-}
+[data-theme="dark"] .icon-sun { display: inline; }
 
 
 /* ═══════════════════════════════════════════════
