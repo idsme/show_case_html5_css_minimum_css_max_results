@@ -111,9 +111,20 @@ body {
   padding-top: var(--space--2xl);
 }
 
+body > *:not(header):not(footer):not(aside) {
+  margin-left: var(--space--md);
+}
+
+
+
 main > *:not(:first-child) {
   margin-top: var(--space--xl);
 }
+
+section > *:not(h1):not(h2)  {
+    margin-left: var(--space--sm);
+}
+
 
 .container {
   width: 90%;
