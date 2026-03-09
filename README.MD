@@ -1,18 +1,43 @@
-# Once CSS
+# CSS Showcase
 
-Makes Ugly basic HTML site look incredible.
+Minimal CSS that makes plain HTML5 look good. Just add `main.css` to your page.
 
-## Just use this css
+## Quick Start
 
-Change a few CSS vars and your good to demo.
---primary: #1F9AD9;
---primary-light: #e7eff3;
---primary-lighter: #f2f4f5;
---primary-dark: #1F7099;
---primary-darker: #294d6b;
+```html
+<link rel="stylesheet" href="main.css" />
+```
 
-## To see it in action
+Structure your page as: `html > body > header > nav`, `main.container > section`, `footer`.
 
-Like, ;) and git clone please.
+## Theming
 
-Greets, Ids Achterhof @ ACME labs
+Change a few CSS variables in `:root` to re-theme everything:
+
+```css
+--color__accent:       #006cac;   /* Primary brand color */
+--color__accent--hover: #005a91;  /* Hover state */
+--color__surface:      #fdfdfd;   /* Page background */
+--color__text:         #282728;   /* Body text */
+--font__family:        ui-monospace, ...; /* Font stack */
+```
+
+All css4 variables follow BEM naming except spacings and margins sizes: `--block__element--modifier`.
+
+## Features
+
+- Styles all common HTML5 tags directly (minimal classes)
+- Light/dark mode with toggle (stored in localStorage)
+- BEM-named design tokens for easy theming
+- Responsive layout
+- Font Awesome icons via CDN
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| `main.css` | All styles and design tokens |
+| `index.html` | Style guide showcase |
+| `theme-toggle.js` | Dark/light mode toggle |
+
+Greets, Ids Achterhof
