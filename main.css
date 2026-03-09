@@ -119,7 +119,8 @@ main > *:not(:first-child) {
   margin-top: var(--space--xl);
 }
 
-section > *:not(h1):not(h2) {
+section > *:not(h1):not(h2),
+article > *:not(h1):not(h2) {
   margin-left: var(--space--sm);
 }
 
