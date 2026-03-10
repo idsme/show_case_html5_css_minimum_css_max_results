@@ -216,34 +216,34 @@ nav a:visited {
    Footer
    ═══════════════════════════════════════════════ */
 
-footer {
+body > footer {
   background-color: var(--color__accent);
   padding: var(--space--sm) 0;
   text-align: center;
 }
 
-footer,
-footer * {
+body > footer,
+body > footer * {
   color: var(--color__text--inverse);
 }
 
-footer ul {
+body > footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-footer ul li {
+body > footer ul li {
   display: inline-block;
   margin: 0 var(--space--sm);
 }
 
-footer a {
+body > footer a {
   color: inherit;
   text-decoration: none;
 }
 
-footer a:hover {
+body > footer a:hover {
   text-decoration: underline;
   opacity: var(--interaction__opacity--hover);
   color: inherit;
