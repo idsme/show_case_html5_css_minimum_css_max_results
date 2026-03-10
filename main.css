@@ -21,7 +21,7 @@
   --color__accent--subtle:       #e6e6e6;
 
   /* ─── Semantic Status Colors ─── */
-  --color__error:                #ff010130;
+  --color__error:                rgba(255, 1, 1, 0.19);
   --color__error--border:        #ff0101;
   --color__warning:              #f59e0b;
   --color__success:              #22c55e;
@@ -57,12 +57,15 @@
   /* ─── Layout ─── */
   --layout__max-width:           768px;
   --layout__padding:             1rem;
+  --layout__breakpoint--mobile:  550px;
 
   /* ─── Components ─── */
   --icon__size:                  1rem;
   --checkbox__size:              1.25rem;
   --indicator__height:           1.5rem;
   --interaction__opacity--hover: 0.85;
+  --textarea__min-height:        6rem;
+  --border__width--focus:        2px;
 
   /* ─── Link Decoration ─── */
   --link__underline--style:      dashed;
@@ -82,7 +85,7 @@
   --color__accent--subtle:       rgba(52, 63, 96, 0.75);
   --border__color:               #3d4663;
   --border__color--strong:       #ab4b08;
-  --color__error:                #ff010140;
+  --color__error:                rgba(255, 1, 1, 0.25);
   --color__error--border:        #ff4444;
 }
 
@@ -157,7 +160,7 @@ nav {
 }
 
 nav ul:first-child li{
-    float: left;
+    text-align: left;
 }
 
 nav > * {
@@ -165,17 +168,15 @@ nav > * {
 }
 
 nav ul:last-child {
-    text-align: right;
+  text-align: right;
 }
 
 nav ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-nav > * {
-    width: 100%;
-}
 
 nav ul li {
   display: inline;
@@ -426,14 +427,14 @@ input[type="password"]:focus,
 select:focus,
 textarea:focus {
   border-color: var(--color__accent);
-  outline: 2px solid rgba(0, 108, 172, 0.25);
-  outline: 2px solid color-mix(in srgb, var(--color__accent) 25%, transparent);
+  outline: var(--border__width--focus) solid rgba(0, 108, 172, 0.25);
+  outline: var(--border__width--focus) solid color-mix(in srgb, var(--color__accent) 25%, transparent);
   outline-offset: 1px;
 }
 
 textarea {
   line-height: var(--line__height--relaxed);
-  min-height: 6rem;
+  min-height: var(--textarea__min-height);
 }
 
 input[type="checkbox"] {
@@ -619,7 +620,7 @@ textarea.form-field-validation-error {
    Responsive
    ═══════════════════════════════════════════════ */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px) { /* var(--layout__breakpoint--mobile) — CSS vars not supported in media queries */
   button,
   .button {
     width: 100%;
