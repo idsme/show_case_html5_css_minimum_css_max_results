@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Brandvoice - Ids Achterhof</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="CSS Showcase brandvoice — minimal CSS design tokens and HTML5 element styling reference.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Ids Achterhof
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="posts.html"><i class="fa-solid fa-newspaper"></i> Posts</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+                <li><a href="brandvoice.html" aria-current="page"><i class="fa-solid fa-palette"></i> Brandvoice</a></li>
+                <li>
+                    <a href="#" data-action="toggle-theme" aria-label="Toggle dark mode">
+                        <i class="fa-solid fa-sun icon-sun"></i>
+                        <i class="fa-solid fa-moon icon-moon"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="section-style-guide">
+            <h1>Style Guide</h1>
+            <h2>Minimal CSS for rapid prototyping</h2>
+            <p>
+                Just add this CSS to your HTML file and it styles every standard HTML5 element.
+                No classes needed for most elements. Structure your page as:
+                html &gt; head &gt; body &gt; main &gt; section &gt; footer
+            </p>
+        </section>
+
+        <section id="section-headings">
+            <h1>Heading Level 1</h1>
+            <h2>Heading Level 2</h2>
+            <h3>Heading Level 3</h3>
+            <h4>Heading Level 4</h4>
+            <p>This is a standard paragraph with <b>bold text</b>, <i>italic text</i>,
+                and <b><i>bold italic text</i></b> inline.</p>
+            <p><small>This is small text, useful for footnotes or fine print.</small></p>
+        </section>
+
+        <section id="section-inline-text">
+            <h2>Inline Text Elements</h2>
+            <p>Use <code>&lt;code&gt;</code> for inline code like <code>var x = 42;</code></p>
+            <p>Use <kbd>Ctrl</kbd> + <kbd>S</kbd> to save — the <code>&lt;kbd&gt;</code> tag styles keyboard shortcuts.</p>
+            <p>Use <code>&lt;mark&gt;</code> to <mark>highlight important text</mark> in a paragraph.</p>
+            <p>Use <code>&lt;abbr&gt;</code> for abbreviations like <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+            <p>Use <code>&lt;ins&gt;</code> and <code>&lt;del&gt;</code> to show <del>removed content</del> and <ins>added content</ins> in revisions.</p>
+            <p>Use <code>&lt;sup&gt;</code> for superscript like E=mc<sup>2</sup> and <code>&lt;sub&gt;</code> for subscript like H<sub>2</sub>O.</p>
+        </section>
+
+        <section id="section-code">
+            <h2>Code &amp; Preformatted</h2>
+            <h3>Code block</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="main.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main class="container"&gt;
+      &lt;section&gt;Your content here&lt;/section&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <section id="section-blockquote">
+            <h2>Blockquote</h2>
+            <blockquote>
+                <p>Good design is as little design as possible. Less, but better, because it
+                    concentrates on the essential aspects, and the products are not burdened
+                    with non-essentials.</p>
+                <cite>— Dieter Rams</cite>
+            </blockquote>
+        </section>
+
+        <section id="section-aside">
+            <h2>Aside</h2>
+            <aside>
+                <p>This is an <code>&lt;aside&gt;</code> element. Use it for tangentially related content,
+                    sidebars, callouts, or supplementary information that complements the main content.</p>
+            </aside>
+        </section>
+
+        <section id="section-horizontal-rule">
+            <h2>Horizontal Rule</h2>
+            <p>The <code>&lt;hr&gt;</code> element creates a thematic break between content sections.</p>
+            <hr>
+            <p>Content continues after the horizontal rule.</p>
+        </section>
+
+        <section id="section-buttons">
+            <h2>Default Buttons</h2>
+            <h3>Available button styles</h3>
+            <button class="float-right">Button Float Right</button>
+            <button class="float-right button-alt">Alt Button</button>
+            <button>Default Button</button>
+            <button class="button-alt">Alt Button</button>
+        </section>
+
+        <section id="section-form">
+            <h2>Form</h2>
+            <h3>All common form controls</h3>
+            <form action="#">
+                <label>First Name <span>*</span>
+                    <input type="text" name="firstname" placeholder="Enter your first name here">
+                </label>
+
+                <label>Last Name <span>*</span>
+                    <input type="text" name="lastname" placeholder="Enter your last name here">
+                </label>
+
+                <label>City
+                    <select name="city">
+                        <option value="" selected>Select city...</option>
+                        <option value="1">London</option>
+                        <option value="2">Paris</option>
+                        <option value="3">New York</option>
+                    </select>
+                </label>
+
+                <label>Email Address <span>*</span>
+                    <input type="email" name="email" placeholder="Enter your email address here">
+                </label>
+
+                <label>Validation Error Example
+                    <input type="text" name="invalid-field"
+                        class="form-field-validation-error" value="This field has an error"
+                        placeholder="This shows the error state">
+                </label>
+
+                <label>Description
+                    <textarea name="description" rows="5" placeholder="Use this space to enter a description"></textarea>
+                </label>
+
+                <p>
+                    <label>
+                        <input type="radio" name="preference" value="a" checked>
+                        Option A (radio button)
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="preference" value="b">
+                        Option B (radio button)
+                    </label>
+                </p>
+
+                <button type="submit">Submit</button>
+                <a href="#" class="button button-alt">Cancel</a>
+
+                <p>
+                    <label>
+                        <input type="checkbox" name="join" value="1" checked>
+                        Add me to the mailing list
+                    </label>
+                </p>
+            </form>
+        </section>
+
+        <section id="section-ordered-list">
+            <h2>Ordered List</h2>
+            <h3>List description</h3>
+            <ol>
+                <li>First Item</li>
+                <li>Second Item</li>
+                <li>Third Item</li>
+            </ol>
+        </section>
+
+        <section id="section-unordered-list">
+            <h2>Unordered List</h2>
+            <h3>List description</h3>
+            <ul>
+                <li>First Item</li>
+                <li>Second Item</li>
+                <li>Third Item</li>
+            </ul>
+        </section>
+
+        <section id="section-definition-list">
+            <h2>Definition List</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language — the standard markup language for web pages.</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets — a style sheet language for describing presentation.</dd>
+                <dt>JavaScript</dt>
+                <dd>A programming language that enables interactive web pages.</dd>
+            </dl>
+        </section>
+
+        <section id="section-table">
+            <h2>Table</h2>
+            <h3>Table description</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>Country</th>
+                    <th>City</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>David</td>
+                    <td>Guetta</td>
+                    <td>david@example.com</td>
+                    <td>France</td>
+                    <td>Paris</td>
+                </tr>
+                <tr>
+                    <td>Martin</td>
+                    <td>Garrix</td>
+                    <td>martin@example.com</td>
+                    <td>NL</td>
+                    <td>Amstelveen</td>
+                </tr>
+                <tr>
+                    <td>Kate</td>
+                    <td>Bush</td>
+                    <td>kate@example.com</td>
+                    <td>UK</td>
+                    <td>Maidstone</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="section-figure">
+            <h2>Figure &amp; Image</h2>
+            <figure>
+                <img src="placeholder.svg" alt="Placeholder image demonstrating the figure element">
+                <figcaption>A placeholder image wrapped in a <code>&lt;figure&gt;</code> element with a <code>&lt;figcaption&gt;</code>.</figcaption>
+            </figure>
+        </section>
+
+        <section id="section-details">
+            <h2>Details &amp; Summary</h2>
+            <details>
+                <summary>Click to expand this collapsible section</summary>
+                <p>This content is hidden by default and revealed when the user clicks the summary.
+                    The <code>&lt;details&gt;</code> element is perfect for FAQs, advanced options,
+                    or any content that should be available but not immediately visible.</p>
+            </details>
+            <details open>
+                <summary>This section starts expanded</summary>
+                <p>Use the <code>open</code> attribute to have a details section expanded by default.
+                    Users can still collapse it by clicking the summary.</p>
+            </details>
+        </section>
+
+        <section id="section-progress">
+            <h2>Progress &amp; Meter</h2>
+            <h3>Progress bar (task completion)</h3>
+            <progress value="65" max="100">65%</progress>
+            <p><small>65% complete</small></p>
+
+            <h3>Meter (scalar measurement)</h3>
+            <meter value="0.7" min="0" max="1" low="0.3" high="0.7" optimum="0.8">70%</meter>
+            <p><small>Disk usage: 70%</small></p>
+        </section>
+
+        <section id="section-address">
+            <h2>Address</h2>
+            <address>
+                123 Example Street<br>
+                City, Country 12345<br>
+                <a href="mailto:info@example.com">info@example.com</a>
+            </address>
+        </section>
+
+        <article id="section-article">
+            <h2>Article</h2>
+            <h3>Self-contained content block</h3>
+            <p>The <code>&lt;article&gt;</code> element represents a self-contained composition
+                that could be independently distributed or reused — such as a blog post, news story,
+                forum post, or product card.</p>
+            <p>In this style guide, <code>&lt;article&gt;</code> is styled identically to
+                <code>&lt;section&gt;</code>, so it inherits the same spacing and heading alignment.
+                Use <code>&lt;article&gt;</code> when the content makes sense on its own,
+                and <code>&lt;section&gt;</code> when it is part of a larger whole.</p>
+        </article>
+
+        <section id="section-links">
+            <h2>Links</h2>
+            <a href="https://www.linkedin.com/in/idsachterhof/">Here's an ordinary text link</a>
+            <a href="https://www.linkedin.com/in/idsachterhof/" class="button">This link looks like a button</a>
+            <a href="https://www.linkedin.com/in/idsachterhof/" class="button button-alt">This link looks like an
+                alternative button</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="posts.html">Posts</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="brandvoice.html">Brandvoice</a></li>
+        </ul>
+        <p>
+            <a href="https://github.com/idsme" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/idsachterhof/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/idsmedev" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="mailto:idsmedev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </p>
+        <p><small>Ids Achterhof — ACMELabs</small></p>
+    </footer>
+
+    <script src="theme-toggle.js"></script>
+
+</body>
+
+</html>
