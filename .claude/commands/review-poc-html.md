@@ -1,0 +1,1 @@
+Run the html5-reviewer skill against all HTML and CSS files in this project. Use brandvoice.html and main.css as the golden reference. Report all deviations in P1, P2, P3 tables. Offer "fix all" at the end.
