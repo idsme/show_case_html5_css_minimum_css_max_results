@@ -17,7 +17,7 @@ severity:
   P3: 8
 components:
   - index.html
-  - main.css
+  - brandvoice.css
 symptoms:
   - Broken HTML entity rendering (&gt&gt; missing semicolon)
   - Malformed bold/italic tag nesting

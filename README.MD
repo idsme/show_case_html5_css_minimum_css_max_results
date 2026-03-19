@@ -5,7 +5,8 @@ Minimal CSS that makes plain HTML5 look good. Just add `main.css` to your page.
 ## Quick Start
 
 ```html
-<link rel="stylesheet" href="main.css" />
+
+<link rel="stylesheet" href="brandvoice.css"/>
 ```
 
 Structure your page as: `html > body > header > nav`, `main.container > section`, `footer`.

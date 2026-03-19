@@ -1,7 +1,7 @@
 ---
 name: html5-reviewer
 description: >
-  Review HTML and CSS files against the project's golden reference (index.html + main.css).
+  Review HTML and CSS files against the project's golden reference (brandvoice.html + brandvoice.css).
   Enforces defensive CSS styling, required HTML structure, CSS variable-only values, and
   navigation patterns. Use when the user asks to "review html", "check my page",
   "validate html5", "review css", "check the page", or creates a new page.
@@ -12,7 +12,7 @@ tools: Read, Glob, Grep, Bash, Agent
 
 # HTML5 & CSS Defensive Style Reviewer
 
-Reviews HTML and CSS files against this project's golden reference implementation (`index.html` + `main.css`). Enforces a **defensive styling philosophy**: the CSS styles `*` elements uniformly first, then applies custom styling on top — ensuring even non-pure HTML5 pages look acceptable.
+Reviews HTML and CSS files against this project's golden reference implementation (`brandvoice.html` + `brandvoice.css`). Enforces a **defensive styling philosophy**: the CSS styles `*` elements uniformly first, then applies custom styling on top — ensuring even non-pure HTML5 pages look acceptable.
 
 ## Design Philosophy
 
@@ -30,15 +30,15 @@ This project uses a **defensive CSS strategy**:
 Before reviewing, ALWAYS read these two files as the source of truth:
 
 ```
-Read: index.html   (HTML structure reference)
-Read: main.css     (CSS architecture reference)
+Read: brandvoice.html   (HTML structure reference)
+Read: brandvoice.css     (CSS architecture reference)
 ```
 
 ## Review Process
 
 ### Step 1: Read the Golden References
 
-Read `index.html` and `main.css` from the project root. These define the correct patterns. Every other HTML and CSS file must conform to these patterns.
+Read `brandvoice.html` and `brandvoice.css` from the project root. These define the correct patterns. Every other HTML and CSS file must conform to these patterns.
 
 ### Step 2: Discover Files to Review
 
@@ -46,11 +46,11 @@ Read `index.html` and `main.css` from the project root. These define the correct
 Glob: *.html, *.css (project root only)
 ```
 
-Skip: `index.html` (it IS the reference), `node_modules/`, `.claude/`, `docs/`, `todos/`.
+Skip: `brandvoice.html` (it IS the reference), `node_modules/`, `.claude/`, `docs/`, `todos/`.
 
 ### Step 3: HTML Structure Enforcement
 
-Every HTML page MUST have this exact nesting structure matching `index.html`:
+Every HTML page MUST have this exact nesting structure matching `brandvoice.html`:
 
 ```html
 <!DOCTYPE html>
@@ -59,9 +59,9 @@ Every HTML page MUST have this exact nesting structure matching `index.html`:
     <meta charset="utf-8" />
     <title>[Page Title] — CSS Showcase</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="[same CSP as index.html]">
+    <meta http-equiv="Content-Security-Policy" content="[same CSP as brandvoice.html]">
     <link rel="stylesheet" href="[Font Awesome with SRI]" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="brandvoice.css" />
 </head>
 <body>
     <header>
@@ -85,7 +85,7 @@ Every HTML page MUST have this exact nesting structure matching `index.html`:
     </main>
     <footer>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="brandvoice.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -104,9 +104,9 @@ Every HTML page MUST have this exact nesting structure matching `index.html`:
 | Language | `<html lang="en" data-theme="light">` required |
 | Charset | `<meta charset="utf-8" />` must be first in `<head>` |
 | Viewport | `<meta name="viewport" content="width=device-width, initial-scale=1" />` required |
-| CSP | `<meta http-equiv="Content-Security-Policy">` must match index.html exactly |
+| CSP | `<meta http-equiv="Content-Security-Policy">` must match brandvoice.html exactly |
 | Font Awesome | Must include SRI `integrity` and `crossorigin` attributes |
-| Stylesheet | `<link rel="stylesheet" ... href="main.css" />` required |
+| Stylesheet | `<link rel="stylesheet" ... href="brandvoice.css" />` required |
 | Header | `<header><nav>` must be first child of `<body>` |
 | Nav structure | Nav must contain only `<ul><li><a>` links — NO `<button>` elements in nav |
 | Nav links | Left `<ul>`: page links with Font Awesome icons. Right `<ul>`: utility links |
@@ -118,7 +118,7 @@ Every HTML page MUST have this exact nesting structure matching `index.html`:
 | Article usage | Use `<article>` for self-contained content (blog post, card); use `<section>` for parts of a whole |
 | Article styling | `<article>` is styled identically to `<section>` in CSS (same indent rule) |
 | Section headings | Each `<section>` or `<article>` should start with `<h2>`, optionally followed by `<h3>` |
-| Footer | Must match index.html footer exactly (same links, same order, same text) |
+| Footer | Must match brandvoice.html footer exactly (same links, same order, same text) |
 | Script | `<script src="theme-toggle.js"></script>` before `</body>` |
 
 ### Step 4: CSS Variable Enforcement
@@ -152,7 +152,7 @@ CSS rule bodies must NOT contain hardcoded values. Every value must reference a 
 
 ### Step 5: Required CSS Selectors (Must Match Exactly)
 
-These selectors in `main.css` define the defensive foundation. They must NOT be modified, overridden, or contradicted by any other CSS:
+These selectors in `brandvoice.css` define the defensive foundation. They must NOT be modified, overridden, or contradicted by any other CSS:
 
 ```css
 /* Universal reset — MUST be exactly this */
@@ -229,11 +229,11 @@ Navigation MUST only use links (`<a>`) inside `<ul><li>`:
 
 ### Step 7: Cross-Page Consistency
 
-Compare each reviewed page against `index.html`:
+Compare each reviewed page against `brandvoice.html`:
 
 | Element | Must Match |
 |---------|-----------|
-| `<head>` content | CSP, Font Awesome link (with SRI), main.css link — byte-identical |
+| `<head>` content | CSP, Font Awesome link (with SRI), brandvoice.css link — byte-identical |
 | `<header><nav>` | Same structure, same links, same order. Only `aria-current` moves |
 | `<footer>` | Byte-identical across all pages |
 | `<script>` | Same `theme-toggle.js` reference |
@@ -287,8 +287,8 @@ Reply with specific numbers (e.g., "fix 1, 3, 5") to fix selectively.
 
 ## Important Notes
 
-- NEVER modify `index.html` or `main.css` — they are the golden reference
-- New pages inherit ALL patterns from `index.html`
-- New CSS files must not duplicate or override `main.css` foundation selectors
+- NEVER modify `brandvoice.html` or `brandvoice.css` — they are the golden reference
+- New pages inherit ALL patterns from `brandvoice.html`
+- New CSS files must not duplicate or override `brandvoice.css` foundation selectors
 - The `*` reset and `body` inheritance are NON-NEGOTIABLE — this is the defensive strategy
 - `fix all` must be offered and must work when the user types it
