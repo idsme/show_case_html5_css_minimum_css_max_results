@@ -85,7 +85,7 @@ Used in hero section (index.html) and contact sections:
 <meta name="author" content="Ids Achterhof">
 <!-- Blog posts also include og:title, og:description, og:type="article" -->
 <link rel="stylesheet" href="[Font Awesome 6.5.1 with SRI]" />
-<link rel="stylesheet" type="text/css" media="screen" href="acme-labs-material-theme.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="acmelabs_brandvoice_theming.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="brandvoice.css" />
 ```
 

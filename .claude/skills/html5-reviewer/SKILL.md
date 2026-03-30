@@ -61,7 +61,7 @@ Every HTML page MUST have this exact nesting structure matching `brandvoice.html
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Security-Policy" content="[same CSP as brandvoice.html]">
     <link rel="stylesheet" href="[Font Awesome with SRI]" />
-    <link rel="stylesheet" type="text/css" media="screen" href="acmelabs_brandvoice_theming.css.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="acmelabs_brandvoice_theming.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="brandvoice.css" />
 </head>
 <body>
