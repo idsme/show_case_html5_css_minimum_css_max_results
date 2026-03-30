@@ -31,6 +31,7 @@ Before reviewing, ALWAYS read these two files as the source of truth:
 
 ```
 Read: brandvoice.html   (HTML structure reference)
+Read: acmelabs_brandvoice_theming.css  (CSS theming architecture reference)
 Read: brandvoice.css     (CSS architecture reference)
 ```
 
@@ -38,7 +39,7 @@ Read: brandvoice.css     (CSS architecture reference)
 
 ### Step 1: Read the Golden References
 
-Read `brandvoice.html` and `brandvoice.css` from the project root. These define the correct patterns. Every other HTML and CSS file must conform to these patterns.
+Read `brandvoice.html` and `acmelabs_brandvoice_theming.css` and `brandvoice.css` from the project root. These define the correct patterns. Every other HTML and CSS file must conform to these patterns.
 
 ### Step 2: Discover Files to Review
 
