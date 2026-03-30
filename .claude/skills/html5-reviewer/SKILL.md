@@ -61,6 +61,7 @@ Every HTML page MUST have this exact nesting structure matching `brandvoice.html
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Security-Policy" content="[same CSP as brandvoice.html]">
     <link rel="stylesheet" href="[Font Awesome with SRI]" />
+    <link rel="stylesheet" type="text/css" media="screen" href="acmelabs_brandvoice_theming.css.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="brandvoice.css" />
 </head>
 <body>
@@ -98,28 +99,29 @@ Every HTML page MUST have this exact nesting structure matching `brandvoice.html
 
 #### Required HTML Structure Rules (P1 violations)
 
-| Rule | Check |
-|------|-------|
-| DOCTYPE | `<!DOCTYPE html>` must be first line |
-| Language | `<html lang="en" data-theme="light">` required |
-| Charset | `<meta charset="utf-8" />` must be first in `<head>` |
-| Viewport | `<meta name="viewport" content="width=device-width, initial-scale=1" />` required |
-| CSP | `<meta http-equiv="Content-Security-Policy">` must match brandvoice.html exactly |
-| Font Awesome | Must include SRI `integrity` and `crossorigin` attributes |
-| Stylesheet | `<link rel="stylesheet" ... href="brandvoice.css" />` required |
-| Header | `<header><nav>` must be first child of `<body>` |
-| Nav structure | Nav must contain only `<ul><li><a>` links — NO `<button>` elements in nav |
-| Nav links | Left `<ul>`: page links with Font Awesome icons. Right `<ul>`: utility links |
-| Nav title | `<span>CSS Showcase</span>` centered between the two `<ul>` elements |
-| aria-current | Active page link must have `aria-current="page"` |
-| Main | `<main class="container">` must wrap all content |
+| Rule | Check                                                                                                       |
+|------|-------------------------------------------------------------------------------------------------------------|
+| DOCTYPE | `<!DOCTYPE html>` must be first line                                                                        |
+| Language | `<html lang="en" data-theme="light">` required                                                              |
+| Charset | `<meta charset="utf-8" />` must be first in `<head>`                                                        |
+| Viewport | `<meta name="viewport" content="width=device-width, initial-scale=1" />` required                           |
+| CSP | `<meta http-equiv="Content-Security-Policy">` must match brandvoice.html exactly                            |
+| Font Awesome | Must include SRI `integrity` and `crossorigin` attributes                                                   |
+| Stylesheet | `<link rel="stylesheet" ... href="acmelabs_brandvoice_theming.css" />` required                             |
+| Stylesheet | `<link rel="stylesheet" ... href="brandvoice.css" />` required                                              |
+| Header | `<header><nav>` must be first child of `<body>`                                                             |
+| Nav structure | Nav must contain only `<ul><li><a>` links — NO `<button>` elements in nav                                   |
+| Nav links | Left `<ul>`: page links with Font Awesome icons. Right `<ul>`: utility links                                |
+| Nav title | `<span>CSS Showcase</span>` centered between the two `<ul>` elements                                        |
+| aria-current | Active page link must have `aria-current="page"`                                                            |
+| Main | `<main class="container">` must wrap all content                                                            |
 | Section IDs | Every `<section>` and `<article>` must have `id="section-{name}"` where `{name}` is a kebab-case descriptor |
-| Sections | Content must be in `<section>` or `<article>` elements inside `<main>` |
-| Article usage | Use `<article>` for self-contained content (blog post, card); use `<section>` for parts of a whole |
-| Article styling | `<article>` is styled identically to `<section>` in CSS (same indent rule) |
-| Section headings | Each `<section>` or `<article>` should start with `<h2>`, optionally followed by `<h3>` |
-| Footer | Must match brandvoice.html footer exactly (same links, same order, same text) |
-| Script | `<script src="theme-toggle.js"></script>` before `</body>` |
+| Sections | Content must be in `<section>` or `<article>` elements inside `<main>`                                      |
+| Article usage | Use `<article>` for self-contained content (blog post, card); use `<section>` for parts of a whole          |
+| Article styling | `<article>` is styled identically to `<section>` in CSS (same indent rule)                                  |
+| Section headings | Each `<section>` or `<article>` should start with `<h2>`, optionally followed by `<h3>`                     |
+| Footer | Must match brandvoice.html footer exactly (same links, same order, same text)                               |
+| Script | `<script src="theme-toggle.js"></script>` before `</body>`                                                  |
 
 ### Step 4: CSS Variable Enforcement
 

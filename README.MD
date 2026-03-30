@@ -6,6 +6,7 @@ Minimal CSS that makes plain HTML5 look good. Just add `main.css` to your page.
 
 ```html
 
+<link rel="stylesheet" href="acme-labs-material-theme.css"/>
 <link rel="stylesheet" href="brandvoice.css"/>
 ```
 
