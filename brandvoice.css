@@ -164,7 +164,7 @@ body > footer a:hover {
 
 h1 { font-size: var(--font__size--h1); margin-bottom: var(--space--xs); }
 h2 { font-size: var(--font__size--h2); }
-h3 { font-size: var(--font__size--h3); }
+h3 { font-size: var(--font__size--h3); color: var(--color__accent); }
 h4 { font-size: var(--font__size--h4); }
 
 p {
