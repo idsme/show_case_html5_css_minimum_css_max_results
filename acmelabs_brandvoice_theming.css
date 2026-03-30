@@ -1,0 +1,90 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Design Token API — Change these values to re-theme the entire page
+   Variable naming follows BEM: --block__element--modifier
+   Spacing uses flat scale: --space--size (no element segment)
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Surface Colors ─── */
+  --color__surface:              #fdfdfd;
+  --color__surface--alt:         #f5f5f5;
+  --color__surface--hover:       #e6e6e6;
+
+  /* ─── Text Colors ─── */
+  --color__text:                 #282728;
+  --color__text--inverse:        #fdfdfd;
+  --color__text--muted:          #6b6b6b;
+
+  /* ─── Accent Colors ─── */
+  --color__accent:               #006cac;
+  --color__accent--hover:        #005a91;
+  --color__accent--subtle:       #e6e6e6;
+
+  /* ─── Semantic Status Colors ─── */
+  --color__error:                rgba(255, 1, 1, 0.19);
+  --color__error--border:        #ff0101;
+  --color__warning:              #f59e0b;
+  --color__success:              #22c55e;
+  --color__info:                 #3b82f6;
+
+  /* ─── Borders ─── */
+  --border__width:               1px;
+  --border__width--accent:       3px;
+  --border__color:               #ece9e9;
+  --border__color--strong:       #3a3a3a;
+  --border__radius:              4px;
+
+  /* ─── Typography ─── */
+  --font__family:                ui-monospace, SFMono-Regular, Menlo, Monaco,
+                                 Consolas, "Liberation Mono", "Courier New", monospace;
+  --font__size--base:            1rem;
+  --font__size--sm:              0.875rem;
+  --font__size--h1:              1.875rem;
+  --font__size--h2:              1.5rem;
+  --font__size--h3:              1.25rem;
+  --font__size--h4:              1.125rem;
+  --line__height:                1.5;
+  --line__height--relaxed:       1.75;
+
+  /* ─── Spacing (4px base grid, flat scale) ─── */
+  --space--xs:                   0.25rem;
+  --space--sm:                   0.5rem;
+  --space--md:                   1rem;
+  --space--lg:                   1.5rem;
+  --space--xl:                   2rem;
+  --space--2xl:                  3rem;
+
+  /* ─── Layout ─── */
+  --layout__max-width:           768px;
+  --layout__padding:             1rem;
+  --layout__breakpoint--mobile:  550px;
+
+  /* ─── Components ─── */
+  --icon__size:                  1rem;
+  --checkbox__size:              1.25rem;
+  --indicator__height:           1.5rem;
+  --interaction__opacity--hover: 0.85;
+  --textarea__min-height:        6rem;
+  --border__width--focus:        2px;
+
+  /* ─── Link Decoration ─── */
+  --link__underline--style:      dashed;
+  --link__underline--offset:     3px;
+}
+
+/* ─── Dark Mode ─── */
+[data-theme="dark"] {
+  --color__surface:              #212737;
+  --color__surface--alt:         #2a3347;
+  --color__surface--hover:       rgba(52, 63, 96, 0.75);
+  --color__text:                 #eaedf3;
+  --color__text--inverse:        #212737;
+  --color__text--muted:          #9ba3b8;
+  --color__accent:               #ff6b01;
+  --color__accent--hover:        #cc5600;
+  --color__accent--subtle:       rgba(52, 63, 96, 0.75);
+  --border__color:               #3d4663;
+  --border__color--strong:       #ab4b08;
+  --color__error:                rgba(255, 1, 1, 0.25);
+  --color__error--border:        #ff4444;
+}

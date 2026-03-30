@@ -36,7 +36,9 @@ jobs:
       - name: Copy public files
         run: |
           mkdir -p _site
-          cp brandvoice.html brandvoice.css theme-toggle.js placeholder.svg  _site/
+          cp index.html main.css theme-toggle.js placeholder.svg about.html brandvoice.html posts.html search.html _site/
+          cp -r posts _site/
+          cp -r images _site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

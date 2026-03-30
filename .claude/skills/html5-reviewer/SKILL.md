@@ -1,7 +1,7 @@
 ---
 name: html5-reviewer
 description: >
-  Review HTML and CSS files against the project's golden reference (brandvoice.html + main.css).
+  Review HTML and CSS files against the project's golden reference (brandvoice.html + brandvoice.css).
   Enforces defensive CSS styling, required HTML structure, CSS variable-only values, and
   navigation patterns. Use when the user asks to "review html", "check my page",
   "validate html5", "review css", "check the page", or creates a new page.
@@ -12,7 +12,7 @@ tools: Read, Glob, Grep, Bash, Agent
 
 # HTML5 & CSS Defensive Style Reviewer
 
-Reviews HTML and CSS files against this project's golden reference implementation (`brandvoice.html` + `main.css`). Enforces a **defensive styling philosophy**: the CSS styles `*` elements uniformly first, then applies custom styling on top — ensuring even non-pure HTML5 pages look acceptable.
+Reviews HTML and CSS files against this project's golden reference implementation (`brandvoice.html` + `brandvoice.css`). Enforces a **defensive styling philosophy**: the CSS styles `*` elements uniformly first, then applies custom styling on top — ensuring even non-pure HTML5 pages look acceptable.
 
 ## Design Philosophy
 
@@ -31,14 +31,14 @@ Before reviewing, ALWAYS read these two files as the source of truth:
 
 ```
 Read: brandvoice.html   (HTML structure reference)
-Read: main.css     (CSS architecture reference)
+Read: brandvoice.css     (CSS architecture reference)
 ```
 
 ## Review Process
 
 ### Step 1: Read the Golden References
 
-Read `brandvoice.html` and `main.css` from the project root. These define the correct patterns. Every other HTML and CSS file must conform to these patterns.
+Read `brandvoice.html` and `brandvoice.css` from the project root. These define the correct patterns. Every other HTML and CSS file must conform to these patterns.
 
 ### Step 2: Discover Files to Review
 
@@ -61,7 +61,8 @@ Every HTML page MUST have this exact nesting structure matching `brandvoice.html
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Security-Policy" content="[same CSP as brandvoice.html]">
     <link rel="stylesheet" href="[Font Awesome with SRI]" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="acmelabs_brandvoice_theming.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="brandvoice.css" />
 </head>
 <body>
     <header>
@@ -98,28 +99,29 @@ Every HTML page MUST have this exact nesting structure matching `brandvoice.html
 
 #### Required HTML Structure Rules (P1 violations)
 
-| Rule | Check |
-|------|-------|
-| DOCTYPE | `<!DOCTYPE html>` must be first line |
-| Language | `<html lang="en" data-theme="light">` required |
-| Charset | `<meta charset="utf-8" />` must be first in `<head>` |
-| Viewport | `<meta name="viewport" content="width=device-width, initial-scale=1" />` required |
-| CSP | `<meta http-equiv="Content-Security-Policy">` must match brandvoice.html exactly |
-| Font Awesome | Must include SRI `integrity` and `crossorigin` attributes |
-| Stylesheet | `<link rel="stylesheet" ... href="main.css" />` required |
-| Header | `<header><nav>` must be first child of `<body>` |
-| Nav structure | Nav must contain only `<ul><li><a>` links — NO `<button>` elements in nav |
-| Nav links | Left `<ul>`: page links with Font Awesome icons. Right `<ul>`: utility links |
-| Nav title | `<span>CSS Showcase</span>` centered between the two `<ul>` elements |
-| aria-current | Active page link must have `aria-current="page"` |
-| Main | `<main class="container">` must wrap all content |
+| Rule | Check                                                                                                       |
+|------|-------------------------------------------------------------------------------------------------------------|
+| DOCTYPE | `<!DOCTYPE html>` must be first line                                                                        |
+| Language | `<html lang="en" data-theme="light">` required                                                              |
+| Charset | `<meta charset="utf-8" />` must be first in `<head>`                                                        |
+| Viewport | `<meta name="viewport" content="width=device-width, initial-scale=1" />` required                           |
+| CSP | `<meta http-equiv="Content-Security-Policy">` must match brandvoice.html exactly                            |
+| Font Awesome | Must include SRI `integrity` and `crossorigin` attributes                                                   |
+| Stylesheet | `<link rel="stylesheet" ... href="acmelabs_brandvoice_theming.css" />` required                             |
+| Stylesheet | `<link rel="stylesheet" ... href="brandvoice.css" />` required                                              |
+| Header | `<header><nav>` must be first child of `<body>`                                                             |
+| Nav structure | Nav must contain only `<ul><li><a>` links — NO `<button>` elements in nav                                   |
+| Nav links | Left `<ul>`: page links with Font Awesome icons. Right `<ul>`: utility links                                |
+| Nav title | `<span>CSS Showcase</span>` centered between the two `<ul>` elements                                        |
+| aria-current | Active page link must have `aria-current="page"`                                                            |
+| Main | `<main class="container">` must wrap all content                                                            |
 | Section IDs | Every `<section>` and `<article>` must have `id="section-{name}"` where `{name}` is a kebab-case descriptor |
-| Sections | Content must be in `<section>` or `<article>` elements inside `<main>` |
-| Article usage | Use `<article>` for self-contained content (blog post, card); use `<section>` for parts of a whole |
-| Article styling | `<article>` is styled identically to `<section>` in CSS (same indent rule) |
-| Section headings | Each `<section>` or `<article>` should start with `<h2>`, optionally followed by `<h3>` |
-| Footer | Must match brandvoice.html footer exactly (same links, same order, same text) |
-| Script | `<script src="theme-toggle.js"></script>` before `</body>` |
+| Sections | Content must be in `<section>` or `<article>` elements inside `<main>`                                      |
+| Article usage | Use `<article>` for self-contained content (blog post, card); use `<section>` for parts of a whole          |
+| Article styling | `<article>` is styled identically to `<section>` in CSS (same indent rule)                                  |
+| Section headings | Each `<section>` or `<article>` should start with `<h2>`, optionally followed by `<h3>`                     |
+| Footer | Must match brandvoice.html footer exactly (same links, same order, same text)                               |
+| Script | `<script src="theme-toggle.js"></script>` before `</body>`                                                  |
 
 ### Step 4: CSS Variable Enforcement
 
@@ -152,7 +154,7 @@ CSS rule bodies must NOT contain hardcoded values. Every value must reference a 
 
 ### Step 5: Required CSS Selectors (Must Match Exactly)
 
-These selectors in `main.css` define the defensive foundation. They must NOT be modified, overridden, or contradicted by any other CSS:
+These selectors in `brandvoice.css` define the defensive foundation. They must NOT be modified, overridden, or contradicted by any other CSS:
 
 ```css
 /* Universal reset — MUST be exactly this */
@@ -233,7 +235,7 @@ Compare each reviewed page against `brandvoice.html`:
 
 | Element | Must Match |
 |---------|-----------|
-| `<head>` content | CSP, Font Awesome link (with SRI), main.css link — byte-identical |
+| `<head>` content | CSP, Font Awesome link (with SRI), brandvoice.css link — byte-identical |
 | `<header><nav>` | Same structure, same links, same order. Only `aria-current` moves |
 | `<footer>` | Byte-identical across all pages |
 | `<script>` | Same `theme-toggle.js` reference |
@@ -287,8 +289,8 @@ Reply with specific numbers (e.g., "fix 1, 3, 5") to fix selectively.
 
 ## Important Notes
 
-- NEVER modify `brandvoice.html` or `main.css` — they are the golden reference
+- NEVER modify `brandvoice.html` or `brandvoice.css` — they are the golden reference
 - New pages inherit ALL patterns from `brandvoice.html`
-- New CSS files must not duplicate or override `main.css` foundation selectors
+- New CSS files must not duplicate or override `brandvoice.css` foundation selectors
 - The `*` reset and `body` inheritance are NON-NEGOTIABLE — this is the defensive strategy
 - `fix all` must be offered and must work when the user types it
